@@ -6,8 +6,8 @@ const NavStyles = styled.ul`
   display: flex;
   justify-self: end;
   font-size: 2rem;
-  a,
-  button {
+
+  a, button {
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
@@ -18,10 +18,12 @@ const NavStyles = styled.ul`
     background: none;
     border: 0;
     cursor: pointer;
+
     @media (max-width: 700px) {
       font-size: 10px;
       padding: 0 10px;
     }
+
     &:before {
       content: '';
       width: 2px;
@@ -33,6 +35,7 @@ const NavStyles = styled.ul`
       top: 0;
       bottom: 0;
     }
+
     &:after {
       height: 2px;
       background: red;
@@ -45,17 +48,20 @@ const NavStyles = styled.ul`
       left: 50%;
       margin-top: 2rem;
     }
-    &:hover,
-    &:focus {
+
+    &:hover, &:focus {
       outline: none;
+      
       &:after {
         width: calc(100% - 60px);
       }
-    @media (max-width: 700px) {
-        width: calc(100% - 10px);
-    }
+
+      @media (max-width: 700px) {
+          width: calc(100% - 10px);
+      }
     }
   }
+
   @media (max-width: 1300px) {
     border-top: 1px solid ${props => props.theme.lightgrey};
     width: 100%;
